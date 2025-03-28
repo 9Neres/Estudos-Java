@@ -1,70 +1,26 @@
-import java.util.Random;
 import java.util.concurrent.Semaphore;
 
-class Filosofos implements Runnable{
-    
-    private Random number = new Random();
+public class JantarDosFilosofos {
 
-    private final int id;
-    private final Semaphore garfo_esquerdo;
-    private final Semaphore garfo_direito;
-    private static volatile boolean finalizar = false;
+    private static final int N = 5; 
+    public static void main(String[] args) throws Exception {
+        
+        Semaphore[] garfo = new Semaphore[N];
 
-    public Filosofos(int id, Semaphore garfo_esquerdo, Semaphore garfo_direito){
-        this.id = id;
-        this.garfo_esquerdo = garfo_esquerdo;
-        this.garfo_direito = garfo_direito;
-    }
-
-    public static void jantarfinalizado(){
-        finalizar = true;
-    }
-
-    @Override
-    public void run(){
-
-        try{
-            while (!finalizar) {
-                pensar();
-                pegarGarfo_esquerdo();
-                pegarGarfo_Direito();
-                comer();
-                devolver_garfo();
-            }
-        }catch(InterruptedException e){
-            System.out.println("Filosofo" + id + "foi interrompido.\n");
+        for(int i = 0 ; i < N; i++){
+            garfo[i] = new Semaphore(i);
         }
-    }
 
-    private void pensar() throws InterruptedException{
-        System.out.println("Filosofo " + id + " esta PENSANDO. \n");
-        Thread.sleep(number.nextInt(10));
-    }
+        Filosofos[] filosofo = new Filosofos[N];
 
-    private void pegarGarfo_esquerdo() throws InterruptedException{
-        if( garfo_esquerdo.availablePermits() == 0){
-            System.out.println("Filosofo " + id + " esta ESPERANDO o garfo esquerdo\n");
+        for (int i = 0; i < N; i++){
+            filosofo[i] = new Filosofos(i, garfo[i], garfo[(i + 1) % N]);
+            new Thread(filosofo[i]).start();
         }
-        garfo_esquerdo.acquire();
-        System.out.println("Filosofo " + id + " esta ESPERANDO o garfo esquerda\n");
-    }
 
-    private void pegarGarfo_Direito() throws InterruptedException{
-        if( garfo_direito.availablePermits() == 0){
-            System.out.println("Filosofo " + id + " esta ESPERANDO o garfo da direita\n");
-        }
-        garfo_direito.acquire();
-        System.out.println("Filosofo " + id + " esta ESPERANDO o garfo da direita\n");
-    }
+        Thread.sleep(2000);
+        Filosofos.jantarfinalizado();
 
-    private void comer() throws InterruptedException{
-        System.out.println("Filosofo " + id + " esta COMENDO. \n");
-        Thread.sleep(number.nextInt(10));
-    }
-
-    private void devolver_garfo() throws InterruptedException{
-        garfo_esquerdo.release();
-        garfo_direito.release();
-        System.out.println("Filosofo " + id + " SOLTOU os garfos.\n");
+        System.out.println("Fim do Jantar :) (EMANUEEEEEEEEL AAAAAAAAAAAAAA ME DA UM 10 :D)");
     }
 }

@@ -1,1 +1,2 @@
-Aprendendo sobre Getters e Setters e POO e metodologia java beans.
+Aprendendo sobre enums que e algo pré-estabelecido que quase nunca se altera, ex: estados como RJ, CE, SP, GO. países como USA,BR,UK ou ate status de relacionamento.
+e sobre toUpperCase para coletar letras maiusculas.

@@ -1,6 +1,6 @@
 # 💻 Projeto de Encapsulamento em Java
 
-Este simples projeto de estudos e o uso de **encapsulamento**, **Herança** e para testar como em Java com diferentes serviços de mensagens simulados: MSN, Facebook Messenger e Telegram.
+Este simples projeto de estudos e o uso de **encapsulamento**, **Herança** e para testar como os mecanismos podem ser reutilizados para suas classses filhas,em Java com diferentes serviços de mensagens simulados: MSN, Facebook Messenger e Telegram.
 
 ## 📁 Estrutura de Pastas
 

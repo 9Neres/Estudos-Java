@@ -1,19 +1,10 @@
 package encapsulamento;
 
-public class ServicoMensage {
+public abstract class ServicoMensage {
 
-    public void enviarMensagem(){
-        validarInternet();
-        
-        System.out.println("Mensagem enviada");
+    public abstract void enviarMensagem(){}
 
-        salvarHistorico();
-
-    }
-
-    public void receberMensagem(){
-        System.out.println("Você recebeu uma mensagem - (Telegram)\n");
-    }
+    public abstract void receberMensagem(){}
 
     private void salvarHistorico(){
         System.out.println("Historico de Mensagem salva");

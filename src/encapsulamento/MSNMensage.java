@@ -1,6 +1,6 @@
 package encapsulamento;
 
-public class MSNMensage extends ServicoMensage{
+public class MSNMensage extends ServicoMensage{ //extends pra herança
 
     public void enviarMensagem(){
         System.out.println("MSN enviou sua mensagem");

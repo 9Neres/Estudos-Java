@@ -2,7 +2,7 @@ package encapsulamento;
 
 public abstract class ServicoMensage {
 
-    public abstract void enviarMensagem();
+    public abstract void enviarMensagem(); // abstrato
 
     public abstract void receberMensagem();
 

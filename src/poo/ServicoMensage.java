@@ -1,4 +1,4 @@
-package encapsulamento;
+package poo;
 
 public abstract class ServicoMensage {
 
@@ -6,11 +6,11 @@ public abstract class ServicoMensage {
 
     public abstract void receberMensagem();
 
-    private void salvarHistorico(){
+    protected void salvarHistorico(){
         System.out.println("Historico de Mensagem salva");
     }
 
-    private void validarInternet(){
+    protected void validarInternet(){
         System.out.println("Conectado a internet");
     }
 }

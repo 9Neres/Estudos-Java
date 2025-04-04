@@ -1,4 +1,4 @@
-package encapsulamento;
+package poo;
 
 public class FaceBook extends ServicoMensage{
 

@@ -1,3 +1,5 @@
+package poo.job;
+
 public non-sealed class Vendedor extends Empregado {
 
     private double comissao;

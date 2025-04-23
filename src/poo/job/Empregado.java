@@ -1,4 +1,6 @@
-public sealed abstract class Empregado permits Gerente, Vendedor{
+package poo.job;
+
+public sealed abstract class Empregado permits Gerente, Vendedor {
 
     protected String nome;
     protected int idade;

@@ -1,4 +1,6 @@
-public non-sealed class Gerente extends Empregado{
+package poo.job;
+
+public non-sealed class Gerente extends Empregado {
 
     protected String login;
     protected String password;

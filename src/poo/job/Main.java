@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package poo.job;
 
 public class Main{
     public static void main ( String [] args){

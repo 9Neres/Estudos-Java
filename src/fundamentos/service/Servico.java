@@ -1,4 +1,4 @@
-package fundamentos.serviço;
+package fundamentos.service;
 
 import java.util.Locale;
 import java.util.Scanner;

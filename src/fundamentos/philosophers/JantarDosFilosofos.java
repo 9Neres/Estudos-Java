@@ -23,6 +23,6 @@ public class JantarDosFilosofos {
         Thread.sleep(2000);
         Filosofos.jantarfinalizado();
 
-        System.out.println("Fim do Jantar :) (EMANUEEEEEEEEL AAAAAAAAAAAAAA ME DA UM 10 :D)");
+        System.out.println("Fim do Jantar :)");
     }
 }

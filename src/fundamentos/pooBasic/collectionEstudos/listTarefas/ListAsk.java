@@ -3,35 +3,19 @@ package fundamentos.pooBasic.collectionEstudos.listTarefas;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe responsável por gerenciar uma lista de tarefas.
- * Implementa operações básicas como adicionar, remover e listar tarefas.
- */
 public class ListAsk {
 
     // Atributo que armazena a lista de tarefas
     private List<Tarefa> tarefaList;
 
-    /**
-     * Construtor que inicializa a lista de tarefas vazia
-     */
     public ListAsk() {
         this.tarefaList = new ArrayList<>();
     }
 
-    /**
-     * Adiciona uma nova tarefa à lista
-     * @param descricao A descrição da tarefa a ser adicionada
-     */
     public void adicionarTarefa(String descricao){
         tarefaList.add(new Tarefa(descricao));
     }
 
-    /**
-     * Remove todas as tarefas que possuem a descrição informada
-     * Observação: Este método pode remover múltiplas tarefas se tiverem a mesma descrição
-     * @param descricao A descrição da tarefa a ser removida
-     */
     public void removeTarefa(String descricao){
         // Cria uma lista temporária para armazenar as tarefas que serão removidas
         List<Tarefa> tarefasParaRemover = new ArrayList<>();
@@ -56,17 +40,10 @@ public class ListAsk {
         return tarefaList.size();
     }
 
-    /**
-     * Exibe todas as tarefas da lista no console
-     * Observação: Esta função depende do método toString() da classe Tarefa
-     */
     public void obterDescricoesTarefas(){
         System.out.println(tarefaList);
     }
 
-    /**
-     * Método principal para testar a funcionalidade da classe
-     */
     public static void main(String [] args){
         // Cria uma nova instância da classe ListAsk
         ListAsk listAsk = new ListAsk();

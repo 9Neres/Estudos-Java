@@ -1,4 +1,4 @@
-package fundamentos.pooBasic.estInterface;
+package fundamentos.pooBasic.InterfaceEstudos.estInterface;
 
 public class BoxSong extends SmartPhone{
 

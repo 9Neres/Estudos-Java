@@ -1,4 +1,4 @@
-package fundamentos.pooBasic.conjuntoConvidados;
+package fundamentos.pooBasic.collectionEstudos.conjuntoConvidados;
 
 import java.util.Objects;
 

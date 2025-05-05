@@ -1,4 +1,4 @@
-package fundamentos.fundBasic.calculadora;
+package fundamentos.fundBasic.basic.calculadora;
 
 import java.util.Scanner;
 

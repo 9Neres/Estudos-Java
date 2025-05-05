@@ -1,4 +1,4 @@
-package fundamentos.pooBasic.agendaContatos;
+package fundamentos.pooBasic.collectionEstudos.agendaContatos;
 
 import java.util.HashSet;
 import java.util.Set;

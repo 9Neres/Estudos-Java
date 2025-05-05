@@ -1,4 +1,4 @@
-package fundamentos.pooBasic.iphone;
+package fundamentos.pooBasic.InterfaceEstudos.iphone;
 
 public interface Navegador {
 

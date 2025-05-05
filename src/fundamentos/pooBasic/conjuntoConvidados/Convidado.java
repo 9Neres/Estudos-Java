@@ -21,15 +21,15 @@ public class Convidado {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Convidado convidado)) return false;
-        return getCodeConvite() == convidado.getCodeConvite();
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        Convidado convidado = (Convidado) object;
+        return codeConvite == convidado.codeConvite;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCodeConvite());
+        return Objects.hashCode(codeConvite);
     }
 
     @Override
